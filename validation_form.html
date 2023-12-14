@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <link rel="stylesheet" href="style.css">
+    <!--above link and href tags are used to link this program with the css file-->
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center">Validation Form</h2>
+        <!--h2 is used for headding-->
+        <!--div used to get seperate division-->
+        <form id="registrationForm"  onsubmit="validateForm(event)">
+            <!--label is used to labelling the required things-->
+            <label for="fullName">Full Name:</label>
+            <!--input used to enter the data-->
+            <!--type used to get the datatype-->
+            <input type="text" id="fullName" name="fullName" placeholder="enter Full Name"required>
+            <!--id gives the identity which is used further in the javascript-->
+            <!--required is used for compulsary entered things-->
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" placeholder="enter Email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="enter valid phone number"required>
+            <!--place holder is a hint used to describe expected value of input field-->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="enter new password" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="enter confirm password" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div id="errorMessages" class="error-messages"></div>
+        <!--here div is used to get the error messages in different division-->
+    </div>
+    <!--below line used to combine with the javascript file-->
+    <script src="script.js"></script>
+</body>
+</html>
